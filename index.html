@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>뉴스 헤드라인</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/reset.css" />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <header>
+        <h1 id="title">Yesterday Breaking News</h1>
+
+        <div id="newDate">
+          <div>
+            <h3>Creater</h3>
+            <h3>Published</h3>
+            <h3>Real Time</h3>
+          </div>
+          <div id="date"></div>
+        </div>
+        <script>
+          let creater = document.createElement("h3");
+          let published = document.createElement("time");
+          let realTime = document.createElement("time");
+          let today = new Date();
+          let year = today.getFullYear();
+          var month = ("0" + (today.getMonth() + 1)).slice(-2);
+          var date = ("0" + today.getDate()).slice(-2);
+          let yesterdayDate = today.getDate() - 1;
+          var hours = ("0" + today.getHours()).slice(-2);
+          var minutes = ("0" + today.getMinutes()).slice(-2);
+          creater.innerText = "Kang Pung Yun";
+
+          published.innerText = `${year}.${month}.${yesterdayDate}`;
+          realTime.innerText = `${year}.${month}.${date} ${hours}:${minutes}`;
+          document.querySelector("#date").appendChild(creater);
+          document.querySelector("#date").appendChild(published);
+          document.querySelector("#date").appendChild(realTime);
+        </script>
+      </header>
+      <section id="content">
+        <ul id="newsList"></ul>
+      </section>
+      <footer></footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
