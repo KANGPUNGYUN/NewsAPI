@@ -100,7 +100,6 @@ footer address {
 }
 footer p {
   color: white;
-  font-size: 24px;
   text-decoration: none;
   text-align: center;
 }
@@ -119,6 +118,9 @@ footer p {
   #newDate {
     display: none;
   }
+  footer p {
+    font-size: 14px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1139px) {
   #newsList {
@@ -127,6 +129,9 @@ footer p {
   h1 {
     font-size: 44px;
   }
+  footer p {
+    font-size: 18px;
+  }
 }
 @media (min-width: 1140px) {
   #newsList {
@@ -134,5 +139,8 @@ footer p {
   }
   h1 {
     font-size: 80px;
+  }
+  footer p {
+    font-size: 24px;
   }
 }
